@@ -1,0 +1,46 @@
+* { color: white; }
+
+.delay-250ms {animation-delay: 200ms}
+.delay-500ms {animation-delay: 300ms}
+.delay-750ms {animation-delay: 400ms}
+.delay-1s,.delay-1000ms {animation-delay: 500ms}
+.delay-1250ms {animation-delay: 600ms}
+.delay-1500ms {animation-delay: 700ms}
+.delay-1750ms {animation-delay: 800ms}
+.delay-2000ms {animation-delay: 900ms}
+.delay-2250ms {animation-delay: 1000ms}
+.delay-2500ms {animation-delay: 1100ms}
+.delay-3000ms {animation-delay: 1300ms}
+.delay-3250ms {animation-delay: 1400ms}
+.delay-3500ms {animation-delay: 1500ms}
+
+.cursor-hand {
+  cursor: pointer;
+}
+
+.center-element, .modal-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-dark-transparent {
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+.box-shadow-5 {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+  0 2px 2px rgba(0, 0, 0, 0.12),
+  0 4px 4px rgba(0, 0, 0, 0.12),
+  0 8px 8px rgba(0, 0, 0, 0.12),
+  0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.rounded-big {
+  border-radius: 1rem;
+}
