@@ -1,4 +1,4 @@
-* { color: white; }
+section * { color: rgba(255, 255, 255, 0.849); }
 
 .delay-250ms {animation-delay: 200ms}
 .delay-500ms {animation-delay: 300ms}
@@ -43,4 +43,11 @@
 
 .rounded-big {
   border-radius: 1rem;
+}
+
+.font1 {
+  font-family: 'Poppins', sans-serif
+}
+.font2 {
+  font-family: 'Galada', cursive
 }

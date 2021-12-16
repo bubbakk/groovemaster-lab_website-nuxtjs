@@ -19,6 +19,8 @@ export default {
   modules: [
     'nuxt-i18n',
     'bootstrap-vue/nuxt',
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/google-fonts',
   ],
   i18n: {
     strategy: 'prefix',
@@ -64,4 +66,22 @@ export default {
     // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
     icons: false
   },
+  fontawesome: {
+    component: 'fa',
+    suffix: true,
+    icons: {
+      solid: ['faHome', 'faGuitar', 'faUsers', 'faUserEdit', 'faLanguage'],
+      regular: [],
+      light: [],
+      duotone: [],
+      brands: []
+    }
+  },
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Galada: true,
+      Poppins: true
+    }
+  }
 }

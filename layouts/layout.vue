@@ -5,7 +5,7 @@
       <b-navbar
         toggleable="lg"
         type="dark"
-        class="shadow"
+        class="shadow font1"
         fixed="top"
         style="background: linear-gradient(to bottom, #282828 0%, #1f1f1f 61%)"
       >
@@ -19,24 +19,28 @@
           <b-navbar-nav class="ml-auto">
             <!-- HOME -->
             <b-nav-text class="mr-4" @click="collapseMenu">
+              <fa-icon icon="home"></fa-icon>
               <nuxt-link :to="localePath('index')">{{
                 $t('pages.home')
               }}</nuxt-link>
             </b-nav-text>
             <!-- LA MIA PRODUZIONE -->
             <b-nav-text class="mr-4" @click="collapseMenu">
+              <fa-icon icon="guitar"></fa-icon>
               <nuxt-link :to="localePath('products')">{{
                 $t('pages.products')
               }}</nuxt-link>
             </b-nav-text>
             <!-- GROOVEMASTER FAMILY -->
             <b-nav-text class="mr-4" @click="collapseMenu">
+              <fa-icon icon="users"></fa-icon>
               <nuxt-link :to="localePath('family')">{{
                 $t('pages.family')
               }}</nuxt-link>
             </b-nav-text>
             <!-- BIO -->
             <b-nav-text class="mr-4" @click="collapseMenu">
+              <fa-icon icon="user-edit"></fa-icon>
               <nuxt-link :to="localePath('bio')">{{
                 $t('pages.bio')
               }}</nuxt-link>
@@ -46,7 +50,7 @@
                 v-for="locale in availableLocales"
                 :key="locale.code"
                 :to="switchLocalePath(locale.code)"
-                >{{ locale.name }}</nuxt-link
+                > <fa-icon :style="{ color: 'black', margin: '0 4px' }" icon="language"></fa-icon>{{ locale.name }}</nuxt-link
               >
             </b-nav-item-dropdown>
           </b-navbar-nav>

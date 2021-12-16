@@ -5,23 +5,25 @@ TODO possibilità di aggiungere news
 
 TODO possibilità di linkare eventualmente le stories Instagram
 
-Global features - `■ 1/1`:
+Global features - `■□ 1/2`:
   * `[✓]` sito web doppia lingua: inglese e italiano
+  * `[ ]` Vercel deploy
 
-Global styles - `■□□□ 1/4`:
+Global styles and graphics - `■■□□ 1/5`:
   * `[ ]` layout
   * `[✓]` animations
+  * `[✓]` icon set (fontawesome)
   * `[ ]` fonts
     * `[ ]` install fonts
     * `[ ]` typography
 
-Componenti - `■□□ 1/3`:
-  * `[ ]` header + nav
+Componenti - `■■□ 2/3`:
+  * `[✓]` header + nav
     * `[✓]` menù auto collassano
-    * `[ ]` icone sui link
+    * `[✓]` icone sui link
   * `[ ]` footer
 
-Pagine responsive - `■□□□□ 1/5`:
+Pagine responsive e multi-lingua - `■□□□□ 1/5`:
   * `[ ]` home page
   * `[ ]` prodotti
   * `[ ]` family
