@@ -50,7 +50,12 @@
                 v-for="locale in availableLocales"
                 :key="locale.code"
                 :to="switchLocalePath(locale.code)"
-                > <fa-icon :style="{ color: 'black', margin: '0 4px' }" icon="language"></fa-icon>{{ locale.name }}</nuxt-link
+              >
+                <fa-icon
+                  :style="{ color: 'black', margin: '0 4px' }"
+                  icon="language"
+                ></fa-icon
+                >{{ locale.name }}</nuxt-link
               >
             </b-nav-item-dropdown>
           </b-navbar-nav>
@@ -114,9 +119,11 @@ export default {
   },
   methods: {
     collapseMenu: function () {
-      document
-        .getElementsByClassName('navbar-toggler')[0]
-        .dispatchEvent(new Event('click'));
+      if (document.getElementById('nav-collapse').classList.contains('show')) {
+        document
+          .getElementsByClassName('navbar-toggler')[0]
+          .dispatchEvent(new Event('click'));
+      }
     },
   },
 };
@@ -146,5 +153,9 @@ body {
 footer.footer p strong {
   background: linear-gradient(to right, rgb(245, 21, 21), rgb(163, 10, 10));
   background-clip: text;
+}
+
+a.nuxt-link-exact-active {
+  border-bottom: 1px dotted gray;
 }
 </style>
