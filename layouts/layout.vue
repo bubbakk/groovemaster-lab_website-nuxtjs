@@ -65,7 +65,7 @@
 
     <!-- content -->
     <!-- 68px = 52px = image size + ( 8px x 2 ) of padding -->
-    <div style="padding-top: 68px">
+    <div style="padding-top: 68px; padding-bottom: 3rem">
       <nuxt></nuxt>
     </div>
 
@@ -81,29 +81,51 @@
             target="_blank"
             style="color: #4267b2; margin-right: 20px"
           >
-            <i class="fab fa-facebook-square fa-2x"></i>
+            <fa-icon
+              :icon="['fab', 'facebook-square']"
+              :style="{ fontSize: '200%' }"
+            ></fa-icon>
           </a>
           <a
             href="https://www.instagram.com/groovemaster_lab"
             target="_blank"
             style="color: #ee0076; margin-right: 20px"
           >
-            <i class="fab fa-instagram fa-2x"></i>
+            <fa-icon
+              :icon="['fab', 'instagram']"
+              :style="{ fontSize: '200%' }"
+            ></fa-icon>
           </a>
           <a
             href="https://www.pinterest.it/Groovemaster73/"
             target="_blank"
             style="color: #bd081c"
           >
-            <i class="fab fa-pinterest-square fa-2x"></i>
+            <fa-icon
+              :icon="['fab', 'pinterest-square']"
+              :style="{ fontSize: '200%' }"
+            ></fa-icon>
           </a>
         </p>
         <p>
-          <i class="fas fa-phone"></i>&nbsp;<br id="t-hid-el-en" />
-          <i class="fas fa-map-marker-alt"></i>&nbsp;Vocabolo Piane 106 -
-          Matelica (MC)<br />
-          P.IVA 1234567890
-          <br />
+          <fa-icon
+            :icon="['fas', 'phone']"
+            :style="{ opacity: '0.4' }"
+          ></fa-icon>&nbsp;<a class="linktext" :href="l" :title="tt">{{ t }}</a
+          ><br />
+          <fa-icon
+            :icon="['fas', 'map-marker-alt']"
+            :style="{ opacity: '0.4' }"
+          ></fa-icon
+          >&nbsp;
+          <a
+            class="linktext"
+            href="https://goo.gl/maps/Yt8t4LGaZmJ7fenw9"
+            title="indizzo su Google Maps"
+            target="_blank"
+            >Vocabolo Piane 106 - Matelica (MC)</a
+          ><br />
+          <span style="font-size: 85%">P.IVA 1234567890</span>
         </p>
       </div>
     </footer>
@@ -126,6 +148,27 @@ export default {
       }
     },
   },
+  data: function () {
+    return {
+      l: '',
+      t: 'ciao',
+      tt: 'ciao ciao',
+    };
+  },
+  mounted: function () {
+    const p1 = Math.pow(3, 2);
+    const p2 = Math.pow(2, 5) + 11;
+    const p3 = String.fromCharCode(p2);
+    const p4 = '7';
+    const p5 = '4';
+    const p6 = Math.pow(2, 2);
+    const p7 = `${p5}${p4} ${p4}${p4}${p5} 33${p6}`;
+    const p8 = 209 * Math.pow(2, 4) + 1;
+
+    this.tt = 'contatto telefonico';
+    this.l = `tel:${p3}3${p1}-3${p5}${p4}-${p4}${p4}${p6}-${p8}`;
+    this.t = `${p3}3${p1} 3${p7}5`;
+  },
 };
 </script>
 
@@ -134,28 +177,43 @@ html {
   position: relative;
   min-height: 100%;
   background-image: url('/images/gray-wood.webp');
-  background-position: top;
+  background-position: bottom;
 }
 body {
   margin-bottom: 200px; /* Margin bottom by footer height */
   background-color: transparent;
 }
 .footer {
+  margin-top: 3rem;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 240px; /* Set the fixed height of the footer here */
-  line-height: 200px; /* Vertically center the text there */
+  height: 220px; /* Set the fixed height of the footer here */
   background-color: rgba(0, 0, 0, 0.2);
   color: lightgray;
+  padding-top: 1.5rem;
+  line-height: 1, 5rem;
 }
 
-footer.footer p strong {
+footer.footer div p strong {
   background: linear-gradient(to right, rgb(245, 21, 21), rgb(163, 10, 10));
   background-clip: text;
+  color: transparent;
+  font-size: 110%;
 }
 
 a.nuxt-link-exact-active {
   border-bottom: 1px dotted gray;
+}
+
+footer a.linktext,
+footer a.linktext:visited {
+  color: #f8f9fa;
+  border-bottom: 1px dotted #f8f9fa;
+}
+footer a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #f8f9fa;
+  color: #f8f9fa;
 }
 </style>

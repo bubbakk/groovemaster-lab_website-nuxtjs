@@ -70,11 +70,11 @@ export default {
     component: 'fa',
     suffix: true,
     icons: {
-      solid: ['faHome', 'faGuitar', 'faUsers', 'faUserEdit', 'faLanguage'],
+      solid: ['faHome', 'faGuitar', 'faUsers', 'faUserEdit', 'faLanguage', 'faMapMarkerAlt', 'faPhone'],
       regular: [],
       light: [],
       duotone: [],
-      brands: []
+      brands: ['faFacebookSquare', 'faPinterestSquare', 'faInstagram', ]
     }
   },
   googleFonts: {
