@@ -23,9 +23,8 @@ Componenti - `■■■■ 4/4`:
     * `[✓]` icone sui link
   * `[✓]` footer
 
-Pagine responsive e multi-lingua - `■□□□□ 1/5`:
-  * `[ ]` home page
-  * `[ ]` prodotti
-  * `[ ]` family
-  * `[✓]` bio
-  * `[ ]` home page
+Pagine responsive e multi-lingua - `■■□□□ 2/5`:
+  * `[ ]` Home: home page
+  * `[✓]` La mia produzione
+  * `[ ]` Groove Family
+  * `[✓]` Bio

@@ -177,12 +177,15 @@ html {
   position: relative;
   min-height: 100%;
   background-image: url('/images/gray-wood.webp');
-  background-position: bottom;
+  background-position: top left;
 }
 body {
   margin-bottom: 200px; /* Margin bottom by footer height */
   background-color: transparent;
 }
+</style>
+
+<style scoped>
 .footer {
   margin-top: 3rem;
   position: absolute;
