@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1>{{ $t('products') }}</h1>
+  <section class="mt-5 px-2 pt-lg-4 pt-xl-6 text-center">
     <b-container>
       <img
         v-for="(modello, idx) of modelli"
@@ -60,12 +59,14 @@
             </b-carousel-slide>
           </b-carousel>
         </div>
-        <div style="flex: 35%; padding: 1rem;">
-          <p v-for="(txt, key) in modelli[modelloSelected].features" :key="key">• {{txt}}</p>
+        <div style="flex: 35%; padding: 1rem">
+          <p v-for="(txt, key) in modelli[modelloSelected].features" :key="key">
+            • {{ txt }}
+          </p>
         </div>
       </div>
     </b-modal>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -125,7 +126,7 @@ export default {
           'short scale 32" or 30.5"',
           'from 4 to 6 strings',
           'our angry baby!!!',
-        ]
+        ],
       },
       {
         name: 'velvet',
